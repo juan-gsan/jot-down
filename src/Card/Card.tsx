@@ -1,4 +1,5 @@
 import { Task } from "../model/task";
+import "./Card.scss";
 
 type PropsType = {
   item: Task;

@@ -1,6 +1,8 @@
 import { SyntheticEvent, useContext, useState } from "react";
 import { AppContext } from "../context/app.context";
 import { Task } from "../model/task";
+import { AddToArtifact } from "@blueprintjs/icons";
+import "./Create.scss";
 
 type FormState = Pick<Task, "title">;
 export function Create() {
@@ -40,7 +42,9 @@ export function Create() {
           placeholder="New Task"
           required
         ></input>
-        <button type="submit">+</button>
+        <button type="submit">
+          <AddToArtifact />
+        </button>
       </form>
     </>
   );
