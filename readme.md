@@ -7,7 +7,6 @@ Happy organizing with Jot-Down!
 ## Technologies Used
 
 React
-Redux
 HTML
 CSS/SASS
 TypeScript

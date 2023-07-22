@@ -1,29 +1,21 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { TaskRepo } from "../services/task.repo";
+import { useContext } from "react";
 import { Card } from "../Card/Card";
-import { Task } from "../model/task";
+import { Create } from "../Create/Create";
+import { AppContext } from "../context/app.context";
 
 export function List() {
-  const [tasks, setTasks] = useState([] as Task[]);
-  const taskRepo = useMemo(
-    () => new TaskRepo("http://localhost:3000/items"),
-    []
-  );
-
-  const handleLoad = useCallback(async () => {
-    const response = await taskRepo.getAllTasks();
-    setTasks(response);
-  }, [taskRepo]);
-
-  useEffect(() => {
-    handleLoad();
-  }, [handleLoad]);
+  const {
+    tasksContext: { tasks },
+  } = useContext(AppContext);
 
   return (
     <>
-      {tasks.map((item) => (
-        <Card key={item.id} item={item}></Card>
-      ))}
+      <Create></Create>
+      <ul>
+        {tasks.map((item) => (
+          <Card key={item.id} item={item}></Card>
+        ))}
+      </ul>
     </>
   );
 }

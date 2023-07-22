@@ -7,7 +7,7 @@ type PropsType = {
 export function Card({ item }: PropsType) {
   return (
     <>
-      <article>{item.title}</article>
+      <li>{item.title}</li>
     </>
   );
 }
