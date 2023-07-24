@@ -1,0 +1,19 @@
+li {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  border: 2px solid rgb(113, 73, 136);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  background-color: rgb(237, 221, 246);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  div {
+    padding: 0.5rem;
+  }
+  .button {
+    cursor: pointer;
+  }
+  .edit {
+    margin-right: 0.25rem;
+  }
+}

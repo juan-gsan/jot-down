@@ -6,7 +6,7 @@ export function useTasks() {
   const [tasks, setTasks] = useState([] as Task[]);
 
   const taskRepo = useMemo(
-    () => new TaskRepo("http://localhost:3000/items"),
+    () => new TaskRepo("http://localhost:3000/items/"),
     []
   );
 
@@ -28,8 +28,29 @@ export function useTasks() {
     }
   };
 
+  const handleUpdate = async (task: Task) => {
+    try {
+      const updatedTask = await taskRepo.updateTask(task.id, task);
+      setTasks(tasks.map((item) => (task.id === item.id ? updatedTask : task)));
+      console.log(tasks);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDelete = async (task: Task) => {
+    try {
+      await taskRepo.deleteTask(task.id);
+      setTasks(tasks.filter((item) => task.id !== item.id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return {
     tasks,
     handleCreate,
+    handleUpdate,
+    handleDelete,
   };
 }

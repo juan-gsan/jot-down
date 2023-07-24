@@ -25,6 +25,7 @@ export function Create() {
     event.preventDefault();
     const newTask: Omit<Task, "id"> = {
       title: formState.title,
+      isUpdating: false,
     };
 
     handleCreate(newTask);

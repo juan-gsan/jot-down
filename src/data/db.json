@@ -1,24 +1,14 @@
 {
   "items": [
     {
-      "id": "1",
-      "title": "Laundry"
+      "title": "Walk dog",
+      "isUpdating": false,
+      "id": "c7S4mv1"
     },
     {
-      "id": "2",
-      "title": "Walk dog"
-    },
-    {
-      "title": "Send letter",
-      "id": "pQTmAge"
-    },
-    {
-      "title": "Pay bills",
-      "id": "-4sEBCf"
-    },
-    {
-      "title": "Go to the supermarket",
-      "id": "U52xFoG"
+      "title": "Send email",
+      "isUpdating": false,
+      "id": "aIBft-2"
     }
   ]
 }

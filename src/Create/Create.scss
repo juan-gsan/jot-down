@@ -1,9 +1,14 @@
 form {
+  max-width: 400px;
+  text-align: center;
   input {
-    padding: 0.15rem;
+    width: 200px;
+    padding: 0.2rem;
+    border: 2px solid rgb(113, 73, 136);
+    border-radius: 5px;
   }
   button {
-    background-color: white;
+    background-color: rgb(240, 236, 242);
     border: none;
     cursor: pointer;
   }
