@@ -26,13 +26,6 @@ export function EditCard({ item }: PropsType) {
     handleUpdate(updatedItem);
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      const updatedItem = { ...item, title: currentInput };
-      handleUpdate(updatedItem);
-    }
-  };
-
   return (
     <>
       <input
@@ -40,7 +33,6 @@ export function EditCard({ item }: PropsType) {
         value={currentInput}
         onChange={handleChange}
         onBlur={handleBlur}
-        onKeyDown={handleKeyDown}
       ></input>
     </>
   );

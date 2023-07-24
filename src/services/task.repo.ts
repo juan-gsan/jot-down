@@ -19,14 +19,14 @@ export class TaskRepo {
     return newTask.json() as Promise<Task>;
   }
 
-  async updateTask(id: Task["id"], task: Partial<Task>): Promise<Task> {
-    const newTask = await fetch(this.url + (id as string), {
+  async updateTask(id: Task["id"], item: Partial<Task>): Promise<Task> {
+    const response = await fetch(this.url + (id as string), {
       method: "PATCH",
-      body: JSON.stringify(task),
+      body: JSON.stringify(item),
       headers: { "Content-Type": "application/json" },
     });
 
-    return newTask.json() as Promise<Task>;
+    return response.json() as Promise<Task>;
   }
 
   async deleteTask(id: Task["id"]): Promise<void> {

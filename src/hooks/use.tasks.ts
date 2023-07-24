@@ -31,8 +31,12 @@ export function useTasks() {
   const handleUpdate = async (task: Task) => {
     try {
       const updatedTask = await taskRepo.updateTask(task.id, task);
-      setTasks(tasks.map((item) => (task.id === item.id ? updatedTask : task)));
-      console.log(tasks);
+      setTasks((prevTasks) => {
+        const updatedTasks = prevTasks.map((item) =>
+          item.id === task.id ? updatedTask : item
+        );
+        return updatedTasks;
+      });
     } catch (error) {
       console.log(error);
     }
