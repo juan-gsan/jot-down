@@ -10,7 +10,7 @@ React
 HTML
 CSS/SASS
 TypeScript
-Blueprint React
+Blueprint JS
 
 ## Contact
 
