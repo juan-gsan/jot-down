@@ -11,6 +11,7 @@ Happy organizing with Jot-Down!
 - CSS/SASS
 - TypeScript
 - Blueprint-JS
+- Jest
 
 ## Contact
 
