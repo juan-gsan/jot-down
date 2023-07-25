@@ -6,11 +6,11 @@ Happy organizing with Jot-Down!
 
 ## Technologies Used
 
-React
-HTML
-CSS/SASS
-TypeScript
-Blueprint React
+- React
+- HTML
+- CSS/SASS
+- TypeScript
+- Blueprint-JS
 
 ## Contact
 
