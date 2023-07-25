@@ -4,7 +4,7 @@ import { Task } from "../model/task";
 import { AddToArtifact } from "@blueprintjs/icons";
 import "./Create.scss";
 
-type FormState = Pick<Task, "title">;
+export type FormState = Pick<Task, "title">;
 export function Create() {
   const {
     tasksContext: { handleCreate },

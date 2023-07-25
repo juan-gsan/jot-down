@@ -36,10 +36,10 @@ export function Card({ item }: PropsType) {
           </div>
         )}
         <div>
-          <span className="button edit" onClick={handleClickEdit}>
+          <span role="button" className="button edit" onClick={handleClickEdit}>
             <Edit />
           </span>
-          <span className="button" onClick={handleClickDelete}>
+          <span role="button" className="button" onClick={handleClickDelete}>
             <Cross />
           </span>
         </div>

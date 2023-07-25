@@ -1,6 +1,7 @@
 import { SyntheticEvent, useEffect, useState, useContext } from "react";
 import { Task } from "../model/task";
 import { AppContext } from "../context/app.context";
+import "./Edit.card.scss";
 
 type PropsType = {
   item: Task;
